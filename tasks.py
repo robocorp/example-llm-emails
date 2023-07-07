@@ -46,7 +46,7 @@ Make sure that the `invoices` list will contain the correct promised payment dat
 Please give only the properly structured JSON in the response (not code, not comments, not anything else):
 """
 
-SYSTEM_PROMPT = """You are an assistant that deals with payment collections for a business. Your role is to extract structutred data from the emails conversations and suggest the next best replies.
+SYSTEM_PROMPT = """You are an assistant that deals with payment collections. Your role is to extract structured data from the email conversations and suggest the next best replies.
 """
 
 def initialize():
@@ -107,17 +107,18 @@ def construct_email_reply(response: str) -> str:
 {json_data.get("summary", "No summary was returned")}
 
 <h2>SUGGESTED REPLY</h2>
-{json_data.get("summary", "No suggested reply was returned")}
+{json_data.get("suggested_reply", "No suggested reply was returned")}
 
 <h2>INVOICES</h2>
 <table>
 <thead>
     <tr>
         <th class="resizable">Invoice ID</th>
-        <th class="resizable">Total value</th>
+        <th class="resizable">Value</th>
         <th class="resizable">Status</th>
-        <th class="resizable">Promised payment date</th>
+        <th class="resizable">Payment promised</th>
         <th class="resizable">Summary</th>
+        <th class="resizable">Action</th>
     </tr>
 </thead>
 <tbody>
@@ -130,6 +131,7 @@ def construct_email_reply(response: str) -> str:
             <td>{invoice.get("status", "NO STATUS")}</td>
             <td>{invoice.get("promised_payment_date", "NO PROMISED DATE")}</td>
             <td>{invoice.get("summary", "NO SUMMARY")}</td>
+            <td><a href="https://www.w3.org/Provider/Style/dummy.html">Update AR</a></td>
         </tr>
 """
 
