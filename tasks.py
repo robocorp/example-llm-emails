@@ -217,7 +217,7 @@ def process_emails():
         try:
             email = item.email()
             inReplyTo = item.payload["email"]["inReplyTo"]
-            references = item.payload["email"]["references"]
+            references = " ".join(item.payload["email"]["references"])
         except Exception as e:
             print(f"Error reading email from payload: {e}")
             break
