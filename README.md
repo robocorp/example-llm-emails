@@ -1,4 +1,4 @@
-# OpenAI LLM email assistant
+# OpenAI LLM Email Assistant
 
 Learn how to use OpenAI's large language models to summarise, extract information and suggest replies with emails! We've made this for a specific use case described below, but with very little changes to the LLM prompts you can fit this to pretty much any email based context.
 
