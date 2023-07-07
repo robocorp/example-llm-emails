@@ -2,9 +2,9 @@
 
 Learn how to use OpenAI's large language models to summarise, extract information and suggest replies with emails! We've made this for a specific use case described below, but with very little changes to the LLM prompts you can fit this to pretty much any email based context.
 
-## USE CASE - Helping Accounts Receivable Payment Collectors
+## USE CASE - Helping Accounts Receivables Payment Collectors
 
-> Imagine working at a large enterprise company selling industrial goods accross the globe. Invoices your customers are supposed to pay are typically large, so the cash flow impact of a payment date is significant. The team sends massive quantities of messages about approaching due dates and unpaid invoices, and need to read replies manually and update the information back to accounts receivables solution. 
+> Imagine working at a large enterprise company selling industrial goods accross the globe. Invoices your customers are supposed to pay are typically large, so the cash flow impact of a payment date is significant. The team sends out massive quantities of messages about approaching due dates and unpaid invoices, and need to read replies manually and update the information back to accounts receivables solution. 
 
 Our automation helps the payment collectors by generating a summary and reply suggestions as well as a list of invoices that are being discussed, with a status based on customer's replies. The bot works in email threads: getting it's inputs as automatically forwarded emails to [Robocorp Control Room](https://cloud.robocorp.com/) (that trigger the bot execution automatically) and then replying back to the same thread. So essentially nothing needs to be installed on the end user machine to use the assistant.
 
@@ -35,7 +35,7 @@ In order to run the bot as-is, you'll need the following in place.
 
 When configuring the process in to Control Room, remember to create an email trigger under `Schedule` step. Also remember to keep the Trigger Process and Parse email checkboxes checked.
 
-![Process Email Trigger screenshot](/ing/email-trigger.png)
+![Process Email Trigger screenshot](/img/email-trigger.png)
 
 ## Running in VS Code
 
